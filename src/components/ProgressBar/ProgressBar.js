@@ -28,13 +28,15 @@ const ProgressBar = ({ value, size }) => {
 
   return (
     <ProgressWrapper 
+      role="progressbar" 
+      aria-valuenow={value}
       style={{
         '--padding': styles.padding,
         '--radius': styles.radius,
         '--height': styles.height,
-      }} role="progressbar" aria-valuenow={value} aria-labelledby="progressbarlabel"
+      }} 
     >
-      <VisuallyHidden id="progressbarlabel">Progress bar</VisuallyHidden>
+      <VisuallyHidden>Progress bar</VisuallyHidden>
       <BarWrapper>
         <Bar 
           style={{
