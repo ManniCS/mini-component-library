@@ -51,7 +51,6 @@ const ProgressWrapper = styled.div`
   box-shadow: 0 2px 4px ${COLORS.transparentGray35} inset;
   border-radius: var(--radius);
   padding: var(--padding);
-  height: var(--height);
 `
 
 const BarWrapper = styled.div`
@@ -62,7 +61,7 @@ const BarWrapper = styled.div`
 
 const Bar = styled.div`
   width: var(--progressPercent); 
-  height: 100%;
+  height: var(--height);
   background-color: ${COLORS.primary};
   border-radius: 4px 0 0 4px;
 `
