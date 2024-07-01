@@ -7,19 +7,19 @@ import VisuallyHidden from '../VisuallyHidden';
 
 const SIZES = { 
   small: { 
-    height: 8,
-    padding: 0,
-    radius: 4,
+    height: '8px',
+    padding: '0px',
+    radius: '4px',
   }, 
   medium: { 
-    height: 12,
-    padding: 0,
-    radius: 4,
+    height: '12px',
+    padding: '0px',
+    radius: '4px',
   }, 
   large: { 
-    height: 16,
-    padding: 4,
-    radius: 8,
+    height: '16px',
+    padding: '4px',
+    radius: '8px',
   }
 }
 
@@ -29,8 +29,8 @@ const ProgressBar = ({ value, size }) => {
   return (
     <ProgressWrapper 
       style={{
-        '--padding': styles.padding + 'px',
-        '--radius': styles.radius + 'px',
+        '--padding': styles.padding,
+        '--radius': styles.radius,
       }} role="progressbar" aria-valuenow={value} aria-labelledby="progressbarlabel"
     >
       <VisuallyHidden id="progressbarlabel">Progress bar</VisuallyHidden>
@@ -38,7 +38,7 @@ const ProgressBar = ({ value, size }) => {
         <Bar 
           style={{
             '--progressPercent': value + '%',
-            '--height': styles.height + 'px',
+            '--height': styles.height,
           }}
         />
       </BarWrapper>
