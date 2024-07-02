@@ -5,12 +5,12 @@ import { COLORS } from '../../constants';
 import Icon from '../Icon';
 import { getDisplayedValue } from './Select.helpers';
 
-const Select = ({ label, value, onChange, children }) => {
+const Select = ({ id, value, onChange, children }) => {
   const displayedValue = getDisplayedValue(value, children);
 
   return (
     <Wrapper>
-      <SelectWrapper value={value} onChange={onChange}>
+      <SelectWrapper id={id} value={value} onChange={onChange}>
         {children}
       </SelectWrapper>
       <PresentationalWrapper>
@@ -38,6 +38,8 @@ const SelectWrapper = styled.select`
   width: 100%;
   height: 100%;
   opacity: 0;
+  /* allow the select to span the full height in Safari */
+  appearance: none;
 `
 
 const PresentationalWrapper = styled.div`  
